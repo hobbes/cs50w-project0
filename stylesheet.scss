@@ -1,4 +1,31 @@
+$height: 18px;
+
 /* Move down content because we have a fixed navbar that is 3.5rem tall */
 body {
-  padding-top: 3.5rem;
+    padding-top: 3.5rem;
 }
+
+th {
+    background-color: lightgrey;
+}
+
+table {
+    border: 1px solid black;
+}
+
+
+.citation {
+    font-weight: bold;
+    padding: 25px;
+    font-family: Arial, sans-serif;
+    font-size: $height
+}
+
+.citation::before {
+    content: "« ";
+}
+
+.citation::after {
+    content: " »";
+}
+
