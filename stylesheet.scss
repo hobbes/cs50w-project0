@@ -1,5 +1,9 @@
 $height: 18px;
 
+%verbatim {
+    font-family: Arial, sans-serif;    
+}
+
 /* Move down content because we have a fixed navbar that is 3.5rem tall */
 body {
     padding-top: 3.5rem;
@@ -13,11 +17,14 @@ table {
     border: 1px solid black;
 }
 
+table tr{
+    border: 1px solid blue;
+}
 
 .citation {
+    @extend %verbatim;
     font-weight: bold;
     padding: 25px;
-    font-family: Arial, sans-serif;
     font-size: $height
 }
 
@@ -29,6 +36,19 @@ table {
     content: " »";
 }
 
+@media (max-width: 500px) {
+    .citation {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
 #dmalan {
     border: 2px solid green;
+}
+
+ol {
+    li {
+        font-weight: bold;
+    }
 }
